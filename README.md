@@ -1,6 +1,8 @@
 # Kali Code Executor
 
-一个基于三层Agent架构的容器代码执行系统，专门用于在Kali Linux Docker容器中执行渗透测试工具。
+一个基于三层Agent架构的容器代码执行系统，在 **Docker** 中执行渗透测试相关代码与命令行工具。
+
+**运行环境说明：** 项目名里的 “Kali” 只是常见示例，**并不强制使用 Kali Linux 镜像**。你可以使用任意 Linux 基础的 Docker 镜像，只要在容器里**配备好 Agent 可能调用的安全工具**（如 nmap、sqlmap、metasploit 等，视任务与配置而定），并确保有 **`python3`** 与 **`bash`**，即可正常对接本项目的执行器。
 
 ## 架构说明
 
@@ -32,7 +34,7 @@ pip install -r requirements.txt
 
 3. 配置环境变量，创建 `.env` 文件：
 ```env
-DOCKER_NAME=你的kali容器名称
+DOCKER_NAME=你的容器名称（任意镜像均可，需配备相应安全工具）
 OPENAI_API_KEY=你的API密钥
 OPENAI_BASE_URL=你的API地址
 MODEL_NAME=gpt-4o
@@ -40,7 +42,7 @@ MODEL_NAME=gpt-4o
 
 如果你没有**配置 Kali 容器**，或觉得**在 Kali 容器里安装工具很麻烦**，这里提供**已配置好的一键部署版本**，并非轻量级，请根据自身情况下载。链接如下：
 
-
+（在此填写你的镜像或文档链接）
 
 ## 使用方法
 

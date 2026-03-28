@@ -24,7 +24,7 @@
 
 1. 克隆项目：
 ```bash
-cd /mnt/data/lzq/Kali_Code_Excuter
+cd Kali_Code_Excuter
 ```
 
 2. 安装依赖：
@@ -40,9 +40,9 @@ OPENAI_BASE_URL=你的API地址
 MODEL_NAME=gpt-4o
 ```
 
-如果你没有**配置 Kali 容器**，或觉得**在 Kali 容器里安装工具很麻烦**，这里提供**已配置好的一键部署版本**，并非轻量级，请根据自身情况下载。链接如下：
+如果你没有**配置 Kali 容器**，或觉得**在 Kali 容器里安装工具很麻烦**，这里提供**已配置好的一键部署版本**，并非轻量级，请根据自身情况下载。强烈不建议在本机情况下直接运行执行器，链接如下：
 
-（在此填写你的镜像或文档链接）
+- [Google Drive 一键部署资源](https://drive.google.com/file/d/1nHu7KkKcIu9lDdgMtiwRqX89zSwjm7tz/view?usp=drive_link)
 
 ## 使用方法
 
@@ -121,8 +121,12 @@ Kali_Code_Excuter/
 
 1. 确保 Docker 容器正在运行且可访问（不限 Kali；镜像内需有所需安全 CLI 与 `python3`）
 2. 确保容器名称与 `.env` 中的 `DOCKER_NAME` 一致
-3. 需要有效的OpenAI API密钥和地址
+3. 需要有效的OpenAI API密钥和地址，deepseek也行
 4. 所有代码执行都在隔离的Docker容器中进行
+
+## Todo
+1. KILL未适配到对话系统中，相关代码待书写
+2. Kali_Code_Excuter/config/tools_manuals.py里对应的工具说明书过于简略，详细的执行参数与few sht prompt待补全
 
 ## 许可证
 
